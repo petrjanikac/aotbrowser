@@ -69,9 +69,6 @@
       <HintPath Condition="Exists('K:\AosService\PackagesLocalDirectory\Bin\Microsoft.Dynamics.AX.Xpp.Support.dll')">K:\AosService\PackagesLocalDirectory\Bin\Microsoft.Dynamics.AX.Xpp.Support.dll</HintPath>
       <HintPath Condition="Exists('J:\AosService\PackagesLocalDirectory\Bin\Microsoft.Dynamics.AX.Xpp.Support.dll')">J:\AosService\PackagesLocalDirectory\Bin\Microsoft.Dynamics.AX.Xpp.Support.dll</HintPath>
     </Reference>
-    <Reference Include="PygmentSharp.Core, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PygmentSharp.Core.0.3.0\lib\netstandard2.0\PygmentSharp.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -89,7 +86,12 @@
     <Compile Include="XPlusPlusLexer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <PackageReference Include="ILMerge">
+      <Version>3.0.41</Version>
+    </PackageReference>
+    <PackageReference Include="PygmentSharp.Core">
+      <Version>0.3.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
